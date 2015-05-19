@@ -1,0 +1,62 @@
+﻿html, body {
+    width: 100%;
+    min-width: 1000px;
+    height:100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+}
+
+#body {
+    padding-bottom: 1.5em;
+}
+
+#footer {
+    width:100%;
+    position: absolute;
+    bottom: 5px;
+    align-content:center;
+    text-align: center;
+    height: 1.5em;
+    font-size:0.8em;
+}
+
+#entrance-container {
+    margin: auto;
+    font-family: Arial;
+    padding-top: 10%;
+}
+
+    #entrance-container img {
+        margin:auto;
+        display:block;
+    }
+menu {
+    padding-bottom: 20px;
+}
+
+    menu ul {
+        list-style: none;
+        margin:auto;
+        width: 30%;
+        border-width: 0px;
+    }
+
+        menu ul li {
+            display: inline-block;
+            width: 32%;
+            text-align:center;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+a, a:visited, a:link, a:hover {
+    text-decoration:none;
+    color:black;
+}
