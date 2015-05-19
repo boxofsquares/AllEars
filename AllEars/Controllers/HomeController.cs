@@ -17,5 +17,16 @@ namespace AllEars.Controllers
         {
             return View();
         }
+
+        public ActionResult Show()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult List()
+        {
+            return View();
+        }
     }
 }

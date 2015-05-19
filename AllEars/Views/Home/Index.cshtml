@@ -6,5 +6,12 @@
         <li>@Html.ActionLink("about us","about")</li>
     </ul>
 </menu>
-    <img src="/images/AllEarsCropped.jpg"
+    <img src="/images/AllEarsCropped.jpg" />
+    <span id="slide-out">@Html.ActionLink("List","list")</span>
 </div>
+
+@section scripts {
+    <script>
+        $('#slide-out').hover(function () { $(this).show(); })
+    </script>
+}

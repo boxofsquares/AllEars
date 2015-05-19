@@ -35,6 +35,14 @@ h3 {
     padding: 1em;
 }
 
+input, textarea {
+    width: 300px;
+}
+
+fieldset {
+    width: 80%;
+    margin: auto;
+}
 /*Index*/
 #entrance-container {
     margin: auto;
@@ -64,6 +72,10 @@ menu {
             font-weight: bold;
             font-size: 1.3em;
         }
+
+#slide-out {
+    display:block;
+}
 
 /*About*/
 #profile-container {
@@ -100,3 +112,4 @@ menu {
     clear: both;
     height: 0;
 }
+

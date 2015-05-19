@@ -17,6 +17,21 @@ namespace AllEars.Controllers
     [InitializeSimpleMembership]
     public class AccountController : Controller
     {
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(LoginModel model, string returnUrl)
+        {
+            if (model.UserName == "test" && model.Password =="test")
+            {
+                FormsAuthentication.SetAuthCookie(model.UserName,false);
+                return RedirectToLocal(returnUrl);
+            }
+
+            // If we got this far, something failed, redisplay form
+            ModelState.AddModelError("", "The user name or password provided is incorrect.");
+            return View(model);
+        }
         //
         // GET: /Account/Login
 
@@ -30,20 +45,20 @@ namespace AllEars.Controllers
         //
         // POST: /Account/Login
 
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public ActionResult Login(LoginModel model, string returnUrl)
-        {
-            if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
-            {
-                return RedirectToLocal(returnUrl);
-            }
+        //[HttpPost]
+        //[AllowAnonymous]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Login(LoginModel model, string returnUrl)
+        //{
+        //    if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
+        //    {
+        //        return RedirectToLocal(returnUrl);
+        //    }
 
-            // If we got this far, something failed, redisplay form
-            ModelState.AddModelError("", "The user name or password provided is incorrect.");
-            return View(model);
-        }
+        //    // If we got this far, something failed, redisplay form
+        //    ModelState.AddModelError("", "The user name or password provided is incorrect.");
+        //    return View(model);
+        //}
 
         //
         // POST: /Account/LogOff
