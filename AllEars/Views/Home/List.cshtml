@@ -1,5 +1,16 @@
-﻿@{
-    ViewBag.Title = "List";
-}
+﻿@model List<QuestionModel>
 
-<h2>List</h2>
+@using AllEars.Models;
+
+<ul id="questions-list">
+@foreach (QuestionModel q in Model)
+{
+    <li>
+    @q.timestamp.ToString()
+        <br />
+    @q.nickname
+        <br />
+    @q.body
+    </li>
+}
+</ul>

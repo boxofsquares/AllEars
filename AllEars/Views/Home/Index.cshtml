@@ -2,16 +2,16 @@
 <menu>
     <ul>
         <li>@Html.ActionLink("the show","show")</li>
-        <li>@Html.ActionLink("ask questions","questions")</li>
+        <li>@Html.ActionLink("your question","askquestion")</li>
         <li>@Html.ActionLink("about us","about")</li>
     </ul>
 </menu>
     <img src="/images/AllEarsCropped.jpg" />
-    <span id="slide-out">@Html.ActionLink("List","list")</span>
+    <div id="slide-out"></div>
 </div>
 
 @section scripts {
     <script>
-        $('#slide-out').hover(function () { $(this).show(); })
+        $('#slide-out').click(function() { window.location.href = '@Url.Action("List", "Home")' })
     </script>
 }

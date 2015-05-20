@@ -1,0 +1,18 @@
+﻿@model AllEars.Models.QuestionModel
+
+@using(Html.BeginForm()){
+<div id="vertical-align-container">
+    <div id="question-container">
+        @Html.TextAreaFor(model => model.body)
+        @Html.Label("How do you want to be mentioned? (optional)", new { style = "display:block" })
+        @Html.TextBoxFor(model => model.nickname)
+        <input type="submit" value ="Ask them!"/>
+        @Html.ValidationSummary()
+    </div>
+</div>
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+    
