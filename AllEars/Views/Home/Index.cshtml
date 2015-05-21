@@ -1,4 +1,4 @@
-﻿<div id="entrance-container">
+﻿<div class="vertical-align-container">
 <menu>
     <ul>
         <li>@Html.ActionLink("the show","show")</li>
@@ -6,12 +6,16 @@
         <li>@Html.ActionLink("about us","about")</li>
     </ul>
 </menu>
+    <div id="image-container">
     <img src="/images/AllEarsCropped.jpg" />
+    </div>
     <div id="slide-out"></div>
 </div>
 
 @section scripts {
     <script>
-        $('#slide-out').click(function() { window.location.href = '@Url.Action("List", "Home")' })
+        $('#slide-out').click(function () {
+            window.location.href = '@Url.Action("List", "Home")'
+        })
     </script>
 }

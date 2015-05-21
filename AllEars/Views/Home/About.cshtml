@@ -3,13 +3,14 @@
 }
 
 
-
+<div class="vertical-align-container" id="about-background-container">
 <div id="profile-container" class="clear-fix">
-    <h3>@Html.ActionLink("Back","Index")</h3>
+    
     <div id="head-1" class="clear-fix">
         <div class="picture-container">
         </div>
-        <span>This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.
+        <span>
+            This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.
             This is Text.This is Text.This is Text.This is Text.This is Text.
             This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.
             This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.
@@ -19,10 +20,15 @@
         <div class="picture-container">
 
         </div>
-        <span>This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.
+        <span>
+            This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.
             This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.
             This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.
             This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.This is Text.
         </span>
     </div>
+    
 </div>
+
+</div>
+<h3>@Html.ActionLink("Back", "Index",null, new { style = "display:block; text-align:center; margin-top: 2em;" })</h3>

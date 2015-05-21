@@ -1,9 +1,10 @@
 ﻿@model AllEars.Models.QuestionModel
 
 @using(Html.BeginForm()){
-<div id="vertical-align-container">
+<div class="vertical-align-container" id="question-background-container">
     <div id="question-container">
-        @Html.TextAreaFor(model => model.body)
+        @Html.Label("Your Question goes here:")
+        @Html.TextAreaFor(model => model.content)
         @Html.Label("How do you want to be mentioned? (optional)", new { style = "display:block" })
         @Html.TextBoxFor(model => model.nickname)
         <input type="submit" value ="Ask them!"/>

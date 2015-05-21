@@ -244,9 +244,12 @@
     <Content Include="App_Data\storage.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\AllEars - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\AllEars - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Images\AllEars.jpg" />
     <Content Include="Images\AllEarsCropped.jpg" />
+    <Content Include="Images\studio_background.jpg" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />

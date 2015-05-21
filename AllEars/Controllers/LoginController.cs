@@ -49,5 +49,11 @@ namespace AllEars.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿html, body {
-    width: 100%;
-    min-width: 1000px;
     height:100%;
+    padding:0;
+    margin:0;  
 }
 
 #page-container {
@@ -15,35 +15,39 @@
 }
 
 body {
-    position: relative;
+    min-width: 1000px;
+    
 }
 
 #body {
     padding-bottom: 1.5em;
+    min-height:800px;
+    overflow:hidden;
 }
 
 #footer {
+    position:absolute;
     width:100%;
-    position: absolute;
-    bottom: 5px;
-    align-content:center;
-    text-align: center;
-    height: 1.5em;
-    font-size:0.8em;
+    text-align:center;
+    bottom:0;
+    clear:both;
 }
+
 a, a:visited, a:link, a:hover {
     text-decoration:none;
     color:black;
 }
 
 h3 {
-    padding: 1em;
+    padding: 0 1em;
 }
 
 input, textarea {
     width: 200px;
     display: inline-block;
-    margin: 3px;   
+    margin: 3px 0 3px 0 ;
+    outline:none;
+    border: 2px solid #e682ee;    
 }
 
 textarea {
@@ -59,6 +63,9 @@ input[type="submit"] {
     display:block;
     width:100%;
 }
+    input[type="submit"]:hover {
+        box-shadow: 0 0 15px white;
+    }
 
 input:focus {
     outline: 0;
@@ -78,17 +85,34 @@ fieldset {
     width: 600px;
     margin: auto;
 }
-/*Index*/
-#entrance-container {
-    margin: auto;
-    font-family: Arial;
-    padding-top: 10%;
+
+.vertical-align-container { 
+    width: 100%;
+    margin-top: 200px;
+    overflow:hidden;
+    position:relative;
+}
+   
+ .clear-fix:after {
+    content: "";
+    clear: both;
+    height: 0;
+    display:block;
+    visibility:hidden;
 }
 
-    #entrance-container img {
-        margin:auto;
+/*Index*/
+    .vertical-align-container img {
+        margin: 0 auto 0 auto;
         display:block;
+        box-shadow:0 0 100px white;
     }
+
+#image-container {
+    background:  #FFC2FF;
+}
+
+
 menu {
     padding-bottom: 20px;
 }
@@ -96,7 +120,7 @@ menu {
     menu ul {
         list-style: none;
         margin:auto;
-        width: 30%;
+        width: 50%;
         border-width: 0px;
     }
 
@@ -108,11 +132,19 @@ menu {
             font-size: 1.3em;
         }
 
+        menu ul li a:hover{
+                color:#70644a !important;
+                transition-duration: 1s;
+                transition-property: color;
+            }
+
+            
+
 #slide-out {
     height:20px;
     width:20px;
     background: white;
-    margin:auto;
+    margin:0 auto 0 auto;
 }
 
     #slide-out:hover {
@@ -124,8 +156,11 @@ menu {
     width: 80%;
     margin:auto;
     max-width: 1200px;
-}
+    padding: 100px 0 100px 0;
+    font-weight: bolder;
+    
 
+}
 
 #head-1, #head-2 {
     width: 45%;
@@ -143,21 +178,34 @@ menu {
 .picture-container {
     width: 100px;
     height: 100px;
-    background: grey;
+    background: white;
+    border: 1px solid black;
     float:left;
     vertical-align: text-top;
     margin: 0 5px 3px 0;
 
 }
 
-.clear-fix:after {
-    content: " ";
-    clear: both;
-    height: 0;
+#about-background-container {
+    border-bottom: 10px solid #FFC2FF;
+    box-shadow: 0 0 200px #FFC2FF;
 }
 
-/*Login*/
+#about-background-container::after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: -1;
+    opacity: 0.3;
+    background:url(../Images/studio_background.jpg) no-repeat;
+    background-size:cover;
+}
 
+
+/*Login*/
 ol li {
     padding: 3px;
 }
@@ -167,16 +215,15 @@ ol li {
 }
 
 /*AskQuestion*/
-#vertical-align-container { 
-    width: 100%;
-    position:absolute;
-    top:40%;
-    transform: translateY(-40%);
+#question-container {
+    padding: 50px 0 50px 0;
+    width: 50%;
+    margin: auto;
 }
 
-#question-container {
-    width: 70%;
-    margin: auto;
+#question-background-container {
+    background: #FFC2FF;
+    box-shadow: 0 0 200px #FFC2FF;
 }
 
 /*List*/
@@ -188,4 +235,30 @@ ol li {
         padding-bottom: 10px;
     }
 
+
+/*Show*/
+#show-background-container {
+    background: #FFC2FF;
+}
+
+#show-container {
+    width: 50%;
+    padding: 20px 10px 20px 10px;
+    margin: auto;
+}
+    
+
+/*@media screen and (max-width: 300px) {
+    ul {
+
+    }
+}*/
+
+@media screen and (max-height:600px) {
+    .vertical-align-container {
+        vertical-align:top;
+        top: 0;
+        transform: none;
+    }
+}
 

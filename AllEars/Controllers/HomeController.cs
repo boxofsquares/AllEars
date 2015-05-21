@@ -41,7 +41,7 @@ namespace AllEars.Controllers
         public ActionResult AskQuestion(QuestionModel question)
         {
             question.timestamp = DateTime.Now;
-            question.body = HttpUtility.HtmlEncode(question.body);
+            question.content = HttpUtility.HtmlEncode(question.content);
             List<QuestionModel> questions = JsonConvert.DeserializeObject<List<QuestionModel>>(System.IO.File.ReadAllText(@Server.MapPath("~/App_Data/storage.json")));
             questions.Add(question);
             JsonSerializer js = new JsonSerializer();

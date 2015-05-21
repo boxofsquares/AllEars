@@ -9,7 +9,7 @@ namespace AllEars.Models
     public class QuestionModel
     {   
         [Required]
-        public string body { get; set; }
+        public string content { get; set; }
         public DateTime timestamp { get; set; }
         public string nickname { get; set; }
     }
