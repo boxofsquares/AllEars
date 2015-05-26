@@ -5,9 +5,15 @@
 }
 
 #page-container {
-    position: relative;
     min-height:100%;
+    width:100%;
+    position:relative;
 }
+
+#push-bar {
+        width: 100%;
+        height: 10%;
+    }
 
 * {
     margin: 0;
@@ -21,8 +27,8 @@ body {
 
 #body {
     padding-bottom: 1.5em;
-    min-height:800px;
-    overflow:hidden;
+    width: 100%;
+
 }
 
 #footer {
@@ -88,9 +94,16 @@ fieldset {
 
 .vertical-align-container { 
     width: 100%;
-    margin-top: 200px;
-    overflow:hidden;
-    position:relative;
+    height: 600px;
+    /*margin-top: 200px;*/
+    clear:both;
+    overflow:hidden;    
+    /*position:absolute*/
+    /*transform:translateY(-50%)*/
+    position:absolute;
+    top: 50%;
+    margin-top: -300px;
+
 }
    
  .clear-fix:after {
@@ -158,6 +171,7 @@ menu {
     max-width: 1200px;
     padding: 100px 0 100px 0;
     font-weight: bolder;
+ 
     
 
 }
@@ -189,6 +203,7 @@ menu {
 #about-background-container {
     border-bottom: 10px solid #FFC2FF;
     box-shadow: 0 0 200px #FFC2FF;
+       height: auto;
 }
 
 #about-background-container::after {
@@ -224,6 +239,7 @@ ol li {
 #question-background-container {
     background: #FFC2FF;
     box-shadow: 0 0 200px #FFC2FF;
+    height: auto;
 }
 
 /*List*/
@@ -241,6 +257,7 @@ ol li {
 /*Show*/
 #show-background-container {
     background: #FFC2FF;
+    height:auto;
 }
 
 #show-container {
@@ -258,9 +275,10 @@ ol li {
 
 @media screen and (max-height:600px) {
     .vertical-align-container {
-        vertical-align:top;
-        top: 0;
-        transform: none;
+        position:relative;
+        padding-top: 10px;
+        transform:none;
+        margin-top: 0;
     }
 }
 
